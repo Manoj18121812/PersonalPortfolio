@@ -355,9 +355,141 @@ footer span{color:var(--c);}
 .rv{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease;}
 .rv.in{opacity:1;transform:translateY(0);}
 
-/* ── RESPONSIVE ── */
-@media(max-width:1050px){.hero{flex-direction:column;padding-top:8rem;}.hl{padding-right:0;}.hr{width:100%;}  .ag,.cw{grid-template-columns:1fr;}}
-@media(max-width:720px){nav{padding:0 1.5rem;}.nm{display:none;}.sw{padding:4rem 1.5rem;}.hero{padding:6rem 1.5rem 3rem;}.pg{grid-template-columns:1fr;}footer{flex-direction:column;text-align:center;}}
+/* ── HAMBURGER ── */
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;z-index:900;background:none;border:none;}
+.ham span{display:block;width:22px;height:2px;background:var(--tx);border-radius:2px;transition:all .3s;}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* Mobile drawer */
+.mob-menu{
+  display:flex;position:fixed;top:60px;left:0;right:0;bottom:0;z-index:700;
+  background:rgba(3,5,10,.97);backdrop-filter:blur(24px);
+  flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;
+  opacity:0;pointer-events:none;transition:opacity .3s;
+}
+.mob-menu.open{opacity:1;pointer-events:all;}
+.mob-menu a{font-family:var(--mono);font-size:1.05rem;color:var(--mu2);letter-spacing:.06em;transition:all .2s;padding:.65rem 2.5rem;border-radius:8px;width:230px;text-align:center;}
+.mob-menu a:hover{color:var(--c);background:var(--c3);}
+.mob-hire{background:var(--c)!important;color:var(--bg)!important;font-weight:700;margin-top:.3rem;border-radius:8px;}
+
+/* ── TABLET (≤1050px) ── */
+@media(max-width:1050px){
+  .hero{flex-direction:column;padding-top:7rem;padding-bottom:4rem;gap:3rem;}
+  .hl{padding-right:0;max-width:100%;}
+  .hr{width:100%;max-width:560px;margin:0 auto;}
+  .ag{grid-template-columns:1fr;}
+  .cw{grid-template-columns:1fr;}
+  .ach-grid{grid-template-columns:1fr 1fr;}
+  .pg{grid-template-columns:1fr;}
+}
+
+/* ── MOBILE (≤768px) ── */
+@media(max-width:768px){
+  /* cursor off on touch */
+  #CUR,#RING{display:none;}
+  body{cursor:auto;}
+
+  nav{padding:0 1.2rem;height:60px;}
+  html{scroll-padding-top:60px;}
+  .nm{display:none;}
+  .nhire{display:none;}
+  .ham{display:flex;}
+
+  .hero{padding:5.5rem 1.2rem 3rem;gap:2rem;}
+  h1.name{font-size:clamp(2.6rem,12vw,4rem);}
+  .typed-wrap{font-size:1rem;}
+  .hdesc{font-size:.88rem;max-width:100%;}
+  .stats{gap:.7rem;flex-wrap:wrap;}
+  .st{min-width:70px;padding:.5rem .7rem;}
+  .sn{font-size:1.3rem;}
+  .sl{font-size:.55rem;}
+  .hbtns{gap:.55rem;}
+  .bg,.bo{font-size:.72rem;padding:.65rem 1.1rem;}
+
+  /* hero card — compact on mobile */
+  .hr{max-width:100%;}
+  .hcard{border-radius:12px;}
+  .tbody{padding:1.1rem;}
+  .orbs{gap:.4rem;}
+  .orb{font-size:.62rem;padding:.25rem .55rem;}
+  .code-block{font-size:.65rem;padding:.8rem;}
+
+  .sw{padding:3.5rem 1.2rem;}
+  .stitle{font-size:1.8rem;margin-bottom:2rem;}
+  .eye{font-size:.6rem;}
+
+  /* about */
+  .ag{grid-template-columns:1fr;gap:2.5rem;}
+  .at p{font-size:.87rem;}
+  .ir{font-size:.7rem;}
+  .ir .lbl{min-width:60px;}
+
+  /* skills tabs — scrollable row */
+  .tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.5rem;gap:.4rem;-webkit-overflow-scrolling:touch;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tb{white-space:nowrap;font-size:.68rem;padding:.38rem .85rem;}
+  .sp.on{grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:.7rem;}
+  .sci{font-size:1.3rem;}.scn{font-size:.68rem;}.scs{font-size:.56rem;}
+
+  /* timeline */
+  .tl{padding-left:1.5rem;}
+  .tldot{left:-1.9rem;width:12px;height:12px;}
+  .tlc{padding:1.2rem 1.3rem;}
+  .tlr{font-size:.95rem;}
+  .tlb li{font-size:.8rem;}
+
+  /* projects */
+  .pg{grid-template-columns:1fr;gap:1.2rem;}
+  .pc{padding:1.4rem;}
+  .pc h3{font-size:.92rem;}
+  .pdesc{font-size:.77rem;}
+  .ppts li{font-size:.75rem;}
+
+  /* achievements */
+  .ach-grid{grid-template-columns:1fr;gap:1.1rem;}
+  .ach-card{padding:1.4rem;}
+  .ach-number{font-size:2.2rem;}
+  .ach-desc{font-size:.78rem;}
+  .streak-bar{gap:1.5px;}
+  .streak-day{width:7px;height:7px;}
+  .lc-rings{gap:.9rem;}
+  .domain-list{gap:.5rem;}
+  .dl-item{font-size:.75rem;padding:.5rem .75rem;}
+  .dl-name{font-size:.68rem;}
+
+  /* certs */
+  .cg{grid-template-columns:1fr;}
+  .cc2{padding:1.2rem;}
+  .cc2 h4{font-size:.8rem;}
+
+  /* education */
+  .ec{padding:1.8rem;flex-direction:column;gap:1.5rem;}
+  .ed-deg{font-size:1rem;}
+  .ed-sc{font-size:2.5rem;}
+  .ed-score-wrap,.edu-score-wrap{text-align:left;}
+
+  /* contact */
+  .cw{grid-template-columns:1fr;gap:2rem;}
+  .cavail{padding:1.4rem;}
+  .cavail h3{font-size:1.1rem;}
+  .clnk{padding:.75rem .9rem;font-size:.8rem;}
+
+  /* footer */
+  footer{flex-direction:column;text-align:center;padding:1.5rem 1.2rem;gap:.75rem;}
+  .flinks{gap:1rem;}
+}
+
+/* ── SMALL MOBILE (≤400px) ── */
+@media(max-width:400px){
+  .stats{justify-content:center;}
+  .st{min-width:60px;}
+  .hbtns{flex-direction:column;}
+  .bg,.bo{width:100%;justify-content:center;}
+  h1.name{font-size:2.4rem;}
+  .ach-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -379,7 +511,19 @@ footer span{color:var(--c);}
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="mailto:manojgavhane1812@gmail.com" class="nhire">Hire Me →</a>
+  <button class="ham" id="HAM" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<!-- Mobile Drawer -->
+<div class="mob-menu" id="MOBMENU">
+  <a href="#about" class="mob-lnk">About</a>
+  <a href="#skills" class="mob-lnk">Skills</a>
+  <a href="#experience" class="mob-lnk">Experience</a>
+  <a href="#projects" class="mob-lnk">Projects</a>
+  <a href="#achievements" class="mob-lnk">Achievements</a>
+  <a href="#education" class="mob-lnk">Education</a>
+  <a href="#contact" class="mob-lnk">Contact</a>
+  <a href="mailto:manojgavhane1812@gmail.com" class="mob-lnk mob-hire">✉ Hire Me</a>
+</div>
 
 <!-- ══ HERO ══ -->
 <section style="position:relative;z-index:1;">
@@ -387,7 +531,7 @@ footer span{color:var(--c);}
   <div class="hl">
     <div class="pill"><span class="pill-dot"></span>Open to Work · Pune, India</div>
     <div class="greet">Hello, World! <span>I'm —</span></div>
-    <h1 class="name">Mr. Manoj<br><span class="grad">Gavhane</span></h1>
+    <h1 class="name">Manoj<br><span class="grad">Gavhane</span></h1>
     <div class="typed-wrap"><span class="typed-txt"></span><span class="cursor-blink"></span></div>
     <p class="hdesc">Passionate <b>DevOps Engineer & Java Full Stack Developer</b> who builds scalable cloud-native systems. <b>228-day GitHub streak</b>, <b>3000+ commits</b>, and <b>240+ LeetCode</b> problems — consistency is the key.</p>
     <div class="stats">
@@ -596,7 +740,7 @@ footer span{color:var(--c);}
       </ul>
       <div class="pst"><span class="tg o">Java</span><span class="tg o">Spring Boot</span><span class="tg c">Docker</span><span class="tg c">Kubernetes</span><span class="tg c">Jenkins</span><span class="tg">Prometheus</span></div>
     </div>
-    <div class="pc rv">
+<div class="pc rv">
       <div class="ptop"><div class="pnum">PROJECT_03 · DevOps Pipeline</div><div class="plinks"><a href="https://github.com/Manoj18121812" target="_blank" class="plnk">⌥</a></div></div>
       <h3>Cloud-Deployed Student Result Management System</h3>
       <p class="pdesc">End-to-end DevOps CI/CD pipeline for a Job Portal with containerization, automated deployments, and monitoring.</p>
@@ -606,7 +750,7 @@ footer span{color:var(--c);}
         <li>Designed responsive user interfaces using Bootstrap and followed MVC architecture.</li>
         <li>Containerized and deployed the application on AWS EC2 using Docker.</li>
       </ul>
-      <div class="pst"><span class="tg c">Docker</span><span class="tg c">Jenkins</span><span class="tg c">Kubernetes</span><span class="tg b">AWS</span><span class="tg">GitHub</span><span class="tg">Grafana</span></div>
+      <div class="pst"><span class="tg c">Docker</span><span class="tg c">Jenkins</span><span class="tg c">Kubernetes</span><span class="tg b">AWS</span><span class="tg">GitHub</span><span class="tg">Spring-Boot</span></div>
     </div>
     <div class="pc rv">
       <div class="ptop"><div class="pnum">PROJECT_04 · Full Stack</div><div class="plinks"><a href="https://github.com/Manoj18121812" target="_blank" class="plnk">⌥</a></div></div>
@@ -872,6 +1016,12 @@ document.querySelectorAll('.tb').forEach(btn=>{btn.addEventListener('click',()=>
   document.querySelectorAll('.sp').forEach(p=>p.classList.remove('on'));
   btn.classList.add('on');document.getElementById('tab-'+btn.dataset.t).classList.add('on');
 });});
+
+/* ── HAMBURGER ── */
+const HAM=document.getElementById('HAM');
+const MOB=document.getElementById('MOBMENU');
+HAM.addEventListener('click',()=>{HAM.classList.toggle('open');MOB.classList.toggle('open');document.body.style.overflow=MOB.classList.contains('open')?'hidden':'';});
+document.querySelectorAll('.mob-lnk').forEach(a=>a.addEventListener('click',()=>{HAM.classList.remove('open');MOB.classList.remove('open');document.body.style.overflow='';}));
 
 /* ── NAV SCROLL ── */
 const NAV=document.getElementById('NAV');
