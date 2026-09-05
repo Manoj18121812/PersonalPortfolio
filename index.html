@@ -619,73 +619,135 @@ footer span{color:var(--c);}
 <hr class="div">
 
 <!-- ══ SKILLS ══ -->
+
 <section id="skills" class="sw">
   <div class="eye">02 — Technical Skills</div>
   <h2 class="stitle">My <span>Toolkit</span></h2>
+
   <div class="tabs">
     <button class="tb on" data-t="devops">DevOps & CI/CD</button>
     <button class="tb" data-t="cloud">Cloud (AWS)</button>
+    <button class="tb" data-t="kubernetes">Containers & K8s</button>
+    <button class="tb" data-t="iac">IaC & Automation</button>
+    <button class="tb" data-t="security">DevSecOps</button>
     <button class="tb" data-t="backend">Backend Java</button>
     <button class="tb" data-t="frontend">Frontend & DB</button>
     <button class="tb" data-t="monitor">Monitoring</button>
     <button class="tb" data-t="tools">Tools & OS</button>
   </div>
+
+  <!-- DEVOPS & CI/CD -->
+
   <div class="sp on" id="tab-devops">
-    <div class="sc2 rv"><span class="sci">🐳</span><span class="scn">Docker</span><span class="scs">Containerization</span></div>
-    <div class="sc2 rv"><span class="sci">☸</span><span class="scn">Kubernetes</span><span class="scs">Orchestration</span></div>
     <div class="sc2 rv"><span class="sci">⚙</span><span class="scn">Jenkins</span><span class="scs">CI/CD Pipelines</span></div>
     <div class="sc2 rv"><span class="sci">🔄</span><span class="scn">CI/CD</span><span class="scs">Automation</span></div>
+    <div class="sc2 rv"><span class="sci">📜</span><span class="scn">Pipeline-as-Code</span><span class="scs">Jenkins Pipeline</span></div>
+    <div class="sc2 rv"><span class="sci">🔗</span><span class="scn">GitHub Webhooks</span><span class="scs">Build Automation</span></div>
+    <div class="sc2 rv"><span class="sci">🔨</span><span class="scn">Maven</span><span class="scs">Build Automation</span></div>
+    <div class="sc2 rv"><span class="sci">🐳</span><span class="scn">Docker</span><span class="scs">Containerization</span></div>
     <div class="sc2 rv"><span class="sci">📦</span><span class="scn">Docker Hub</span><span class="scs">Image Registry</span></div>
-    <div class="sc2 rv"><span class="sci">📈</span><span class="scn">HPA</span><span class="scs">Auto-scaling</span></div>
-    <div class="sc2 rv"><span class="sci">🌐</span><span class="scn">Ingress</span><span class="scs">K8s Routing</span></div>
-    <div class="sc2 rv"><span class="sci">🗂</span><span class="scn">ConfigMaps</span><span class="scs">K8s Config</span></div>
-    <div class="sc2 rv"><span class="sci">🔍</span><span class="scn">SonarQube</span><span class="scs">Code Quality</span></div>
-    <div class="sc2 rv"><span class="sci">🛡</span><span class="scn">OWASP DC</span><span class="scs">Dependency Scan</span></div>
-    <div class="sc2 rv"><span class="sci">🚨</span><span class="scn">Trivy</span><span class="scs">Vulnerability Scan</span></div>
-     
   </div>
+
+  <!-- CLOUD AWS -->
+
   <div class="sp" id="tab-cloud">
     <div class="sc2 rv"><span class="sci">🖥</span><span class="scn">EC2</span><span class="scs">Compute</span></div>
     <div class="sc2 rv"><span class="sci">🪣</span><span class="scn">S3</span><span class="scs">Object Storage</span></div>
-    <div class="sc2 rv"><span class="sci">🔑</span><span class="scn">IAM</span><span class="scs">Access Mgmt</span></div>
-    <div class="sc2 rv"><span class="sci">🗄</span><span class="scn">RDS</span><span class="scs">Managed DB</span></div>
-    <div class="sc2 rv"><span class="sci">🔒</span><span class="scn">VPC</span><span class="scs">Networking</span></div>
-    <div class="sc2 rv"><span class="sci">🌍</span><span class="scn">Route 53</span><span class="scs">DNS</span></div>
-    <div class="sc2 rv"><span class="sci">👁</span><span class="scn">CloudWatch</span><span class="scs">Monitoring</span></div>
+    <div class="sc2 rv"><span class="sci">🔑</span><span class="scn">IAM</span><span class="scs">Access Management</span></div>
+    <div class="sc2 rv"><span class="sci">🗄</span><span class="scn">RDS</span><span class="scs">Managed Database</span></div>
+    <div class="sc2 rv"><span class="sci">🔒</span><span class="scn">VPC</span><span class="scs">Cloud Networking</span></div>
+    <div class="sc2 rv"><span class="sci">🌍</span><span class="scn">Route 53</span><span class="scs">DNS Management</span></div>
+    <div class="sc2 rv"><span class="sci">☸</span><span class="scn">Amazon EKS</span><span class="scs">Managed Kubernetes</span></div>
+    <div class="sc2 rv"><span class="sci">👁</span><span class="scn">CloudWatch</span><span class="scs">AWS Monitoring</span></div>
   </div>
+
+  <!-- CONTAINERS & KUBERNETES -->
+
+  <div class="sp" id="tab-kubernetes">
+    <div class="sc2 rv"><span class="sci">🐳</span><span class="scn">Docker</span><span class="scs">Containerization</span></div>
+    <div class="sc2 rv"><span class="sci">☸</span><span class="scn">Kubernetes</span><span class="scs">Orchestration</span></div>
+    <div class="sc2 rv"><span class="sci">☁️</span><span class="scn">EKS</span><span class="scs">Managed K8s</span></div>
+    <div class="sc2 rv"><span class="sci">📈</span><span class="scn">HPA</span><span class="scs">Auto-scaling</span></div>
+    <div class="sc2 rv"><span class="sci">🌐</span><span class="scn">Ingress</span><span class="scs">K8s Routing</span></div>
+    <div class="sc2 rv"><span class="sci">🗂</span><span class="scn">ConfigMaps</span><span class="scs">K8s Configuration</span></div>
+    <div class="sc2 rv"><span class="sci">🔐</span><span class="scn">Secrets</span><span class="scs">Sensitive Data</span></div>
+    <div class="sc2 rv"><span class="sci">🔄</span><span class="scn">Rolling Updates</span><span class="scs">Zero Downtime</span></div>
+    <div class="sc2 rv"><span class="sci">⛵</span><span class="scn">Helm</span><span class="scs">K8s Package Manager</span></div>
+    <div class="sc2 rv"><span class="sci">🛡</span><span class="scn">NGINX Ingress</span><span class="scs">External Access</span></div>
+  </div>
+
+  <!-- IaC & AUTOMATION -->
+
+  <div class="sp" id="tab-iac">
+    <div class="sc2 rv"><span class="sci">🏗</span><span class="scn">Terraform</span><span class="scs">Infrastructure as Code</span></div>
+    <div class="sc2 rv"><span class="sci">⚙️</span><span class="scn">Ansible</span><span class="scs">Configuration Management</span></div>
+    <div class="sc2 rv"><span class="sci">📋</span><span class="scn">Playbooks</span><span class="scs">Server Automation</span></div>
+    <div class="sc2 rv"><span class="sci">🧩</span><span class="scn">Ansible Roles</span><span class="scs">Reusable Automation</span></div>
+    <div class="sc2 rv"><span class="sci">🔐</span><span class="scn">SSH</span><span class="scs">Secure Server Access</span></div>
+    <div class="sc2 rv"><span class="sci">☁️</span><span class="scn">AWS Provisioning</span><span class="scs">Infrastructure Automation</span></div>
+  </div>
+
+  <!-- DEVSECOPS -->
+
+  <div class="sp" id="tab-security">
+    <div class="sc2 rv"><span class="sci">🔍</span><span class="scn">SonarQube</span><span class="scs">Code Quality</span></div>
+    <div class="sc2 rv"><span class="sci">🛡</span><span class="scn">OWASP DC</span><span class="scs">SCA Dependency Scan</span></div>
+    <div class="sc2 rv"><span class="sci">🚨</span><span class="scn">Trivy</span><span class="scs">Container Scanning</span></div>
+    <div class="sc2 rv"><span class="sci">🚦</span><span class="scn">Quality Gates</span><span class="scs">Secure Builds</span></div>
+    <div class="sc2 rv"><span class="sci">🔐</span><span class="scn">Vulnerability Scanning</span><span class="scs">Shift-Left Security</span></div>
+  </div>
+
+  <!-- BACKEND JAVA -->
+
   <div class="sp" id="tab-backend">
     <div class="sc2 rv"><span class="sci">☕</span><span class="scn">Java</span><span class="scs">Core Language</span></div>
     <div class="sc2 rv"><span class="sci">🌱</span><span class="scn">Spring Boot</span><span class="scs">Framework</span></div>
+    <div class="sc2 rv"><span class="sci">🌿</span><span class="scn">Spring MVC</span><span class="scs">Web Framework</span></div>
     <div class="sc2 rv"><span class="sci">🛡</span><span class="scn">Spring Security</span><span class="scs">Auth & RBAC</span></div>
     <div class="sc2 rv"><span class="sci">🔗</span><span class="scn">REST APIs</span><span class="scs">Web Services</span></div>
     <div class="sc2 rv"><span class="sci">🧩</span><span class="scn">Microservices</span><span class="scs">Architecture</span></div>
-    <div class="sc2 rv"><span class="sci">🔐</span><span class="scn">JWT Auth</span><span class="scs">Security</span></div>
+    <div class="sc2 rv"><span class="sci">🔐</span><span class="scn">JWT Auth</span><span class="scs">Authentication</span></div>
     <div class="sc2 rv"><span class="sci">📋</span><span class="scn">Hibernate/JPA</span><span class="scs">ORM</span></div>
   </div>
+
+  <!-- FRONTEND & DATABASE -->
+
   <div class="sp" id="tab-frontend">
     <div class="sc2 rv"><span class="sci">🗄</span><span class="scn">MySQL</span><span class="scs">RDBMS</span></div>
     <div class="sc2 rv"><span class="sci">🍃</span><span class="scn">Thymeleaf</span><span class="scs">Templating</span></div>
     <div class="sc2 rv"><span class="sci">🌐</span><span class="scn">HTML5</span><span class="scs">Markup</span></div>
     <div class="sc2 rv"><span class="sci">🎨</span><span class="scn">CSS3</span><span class="scs">Styling</span></div>
-    <div class="sc2 rv"><span class="sci">🅱</span><span class="scn">Bootstrap</span><span class="scs">UI Framework</span></div>
+    <div class="sc2 rv"><span class="sci">🅱</span><span class="scn">Bootstrap 5</span><span class="scs">UI Framework</span></div>
   </div>
+
+  <!-- MONITORING -->
+
   <div class="sp" id="tab-monitor">
     <div class="sc2 rv"><span class="sci">🔥</span><span class="scn">Prometheus</span><span class="scs">Metrics</span></div>
     <div class="sc2 rv"><span class="sci">📊</span><span class="scn">Grafana</span><span class="scs">Dashboards</span></div>
-    <div class="sc2 rv"><span class="sci">🔔</span><span class="scn">Alerting</span><span class="scs">Notifications</span></div>
-    <div class="sc2 rv"><span class="sci">👁</span><span class="scn">Observability</span><span class="scs">Full Stack</span></div>
+    <div class="sc2 rv"><span class="sci">🔔</span><span class="scn">Alertmanager</span><span class="scs">Alerting</span></div>
+    <div class="sc2 rv"><span class="sci">👁</span><span class="scn">Observability</span><span class="scs">Infrastructure Monitoring</span></div>
+    <div class="sc2 rv"><span class="sci">☁️</span><span class="scn">CloudWatch</span><span class="scs">AWS Monitoring</span></div>
   </div>
+
+  <!-- TOOLS & OS -->
+
   <div class="sp" id="tab-tools">
     <div class="sc2 rv"><span class="sci">🐙</span><span class="scn">Git / GitHub</span><span class="scs">Version Control</span></div>
-    <div class="sc2 rv"><span class="sci">🔨</span><span class="scn">Maven</span><span class="scs">Build Tool</span></div>
-    <div class="sc2 rv"><span class="sci">🐧</span><span class="scn">Linux Ubuntu</span><span class="scs">OS</span></div>
+    <div class="sc2 rv"><span class="sci">🐧</span><span class="scn">Linux Ubuntu</span><span class="scs">Operating System</span></div>
     <div class="sc2 rv"><span class="sci">📜</span><span class="scn">Bash / Shell</span><span class="scs">Scripting</span></div>
+    <div class="sc2 rv"><span class="sci">🌐</span><span class="scn">Nginx</span><span class="scs">Web Server</span></div>
+    <div class="sc2 rv"><span class="sci">🔒</span><span class="scn">SSL/TLS</span><span class="scs">Security</span></div>
+    <div class="sc2 rv"><span class="sci">🌍</span><span class="scn">DNS</span><span class="scs">Networking</span></div>
+    <div class="sc2 rv"><span class="sci">🔗</span><span class="scn">TCP/IP</span><span class="scs">Networking</span></div>
     <div class="sc2 rv"><span class="sci">📮</span><span class="scn">Postman</span><span class="scs">API Testing</span></div>
     <div class="sc2 rv"><span class="sci">💡</span><span class="scn">IntelliJ IDEA</span><span class="scs">IDE</span></div>
   </div>
+
 </section>
 
 <hr class="div">
+
 
 <!-- ══ EXPERIENCE ══ -->
 
